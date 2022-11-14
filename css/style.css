@@ -1,0 +1,778 @@
+* {padding: 0; margin: 0; box-sizing: border-box;}
+html,body {height: 100%;}
+
+.container {max-width: 1440px; margin: 0 auto; padding: 0 2%;}
+
+.flex {display: flex; flex-wrap: wrap;}
+.w100 {width: 100%;}
+.w50 {width: 50%;}
+.w33 {width: 33.33%;}
+
+.clear {clear: both;}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@font-face {
+    font-family: 'Amina';
+    src: url('../fonts/Amina-Bold.woff');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter.ttf');
+}
+
+@font-face {
+    font-family: 'Italianno';
+    src: url('../fonts/Italianno-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/* ! CLASSES PADÃO ! ----------------------------------------------------------------------------------------------------------------------------------- */
+
+.carroussel {
+    position: relative;
+}
+
+.carroussel .slick-arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 0;
+    outline: none;
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.carroussel .slick-prev {
+    left: 0px;
+}
+
+.carroussel .slick-next {
+    right: 0px;
+}
+
+.carroussel ul.slick-dots {
+    bottom: -30px;
+}
+
+.carroussel ul.slick-dots li button::before {
+    font-size: 24px; 
+}
+
+.carroussel .product {
+    width: 270px; height: 300px;
+    background-color: white;
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.carroussel .product .img {
+    width: 100%; height: 172px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.carroussel .product .info {
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.carroussel .product .info h2 {
+    font-family: 'Inter';
+    margin: 4px 0 8px;
+}
+
+.carroussel .product .info span {
+    display: inline-block;
+    position: relative;
+}
+
+.carroussel .product .info span .line {
+    width: 100%; height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 50%; transform: translateY(-50%) rotate(12deg);
+}
+
+.carroussel .product .info button {
+    width: 100%; background-color: rgb(var(--Verde-Pri));
+    border: 0; outline: none;
+    height: 24px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.lineFrase {
+    width: 60%; height: 4px;
+    border-radius: 2px;
+    background-color: black;
+    margin: 30px auto;
+}
+
+.frase {
+    width: 58%;
+    margin: 0 auto 20px;
+}
+
+.frase > h1 {
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Inter';
+    position: relative;
+}
+
+.frase > h1 > span {
+    text-decoration: underline;
+}
+
+.frase > h1 > span:hover .aviso {
+    display: block;
+}
+
+.frase .aviso {
+    background-color: rgb(var(--Branco-Mari));
+}
+
+.aviso p {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.aviso p span {
+    color: rgb(var(--Font-green));
+}
+
+.mini-banner {
+    background-color: black;
+    width: 100%; height: 180px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center; justify-content: center;
+    margin-bottom: 50px;
+}
+
+.mini-banner .titulo {
+    width: 420px; height: 100px;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+
+.dourado {
+    background-color: rgba(var(--Dourado-Bru), 70%);
+}
+
+.verde {
+    background-color: rgba(var(--Verde-Pri), 70%);
+}
+
+.rosa {
+    background-color: rgba(var(--Rosa-Emili), 70%);
+}
+
+.roxo {
+    background-color: rgba(var(--Roxo-Elaine), 70%);
+}
+
+.mini-banner .titulo h2 {
+    font-family: 'Italianno';
+    color: white;
+    font-size: 62px;
+    text-shadow: 2px 2px 2px rgb(161, 161, 161);
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.cupom {
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(var(--Branco-Mari));
+    padding: 20px;
+    z-index: 10;
+    border: 4px solid rgb(var(--Font-green));
+}
+
+.cupom .close {
+    position: absolute;
+    right: 4px;
+    top: 36px;
+    transform: translate(-50%,-50%);
+    width: 32px; height: 32px;
+    background-color: rgb(var(--Verde-Pri));
+    color: rgb(var(--Font-green));
+    display: flex;
+    align-items: center; justify-content: center;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.cupom img {
+    width: 40vh;
+}
+
+
+/*? Screen >= 1200px Extra Large WIDE DESKTOP ---------------------------------------------------------------------------------------------------------- */
+
+body {
+    background-color: rgb(var(--Branco-Mari));
+}
+
+header {
+    width: 100%;
+    background-color: rgb(var(--Verde-Pri));
+    position: relative;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .links {
+    float: left;
+    padding: 40px 0;
+}
+
+header .links ul {
+
+}
+
+header .links ul li {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 4px;
+    color: rgb(var(--Font-green));
+    position: relative;
+}
+
+header .links ul li a {
+    text-decoration: none;
+    color: rgb(var(--Font-green));
+}
+
+header .links ul li:hover > ul {
+    display: block;
+}
+
+header .links ul li > ul {
+    position: absolute;
+    display: none;
+    width: 100%;
+}
+
+header .links ul li > ul li {
+    display: block;
+    padding: 6px;
+    background-color: white;
+}
+
+header .links ul li > ul li:hover {
+    background-color: rgb(var(--Branco-Mari));
+}
+
+header .links ul li > ul li a {
+    display: block;
+}
+
+header .logo-wraper {
+    position: absolute;
+    top: 0%;
+    left: 50%; transform: translateX(-50%);
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background-color: rgb(var(--Verde-Pri));
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: center;
+}
+
+header .logo-wraper .logo {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background-image: url('../images/logo.jpeg');
+    background-position: center;
+    background-size: contain;
+}
+
+header .perfil {
+    width: 278px;
+    background-color: rgb(var(--Branco-Mari));
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 19px;
+    padding: 4px;
+    
+}
+
+header .perfil .perfil-img {
+    width: 32px; height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--Branco-Mari));
+    border: 1px solid rgb(var(--Font-green));
+    border-radius: 50%;
+}
+
+header .perfil .info-pessoa {
+    width: calc(100% - 64px);
+    padding-left: 8px;
+}
+
+header .perfil .info-pessoa p {
+    font-size: 14px;
+    color: rgb(var(--Font-green));
+}
+
+header .perfil .info-pessoa p.bem-vindo {
+    font-size: 12px;
+    color: rgb(165, 165, 165);
+}
+
+header .perfil .carrinho {
+    width: 32px; height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+header .perfil .carrinho:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+header .perfil i {
+    color: rgb(var(--Font-green));
+}
+
+/* HEADER FIM */
+
+section.banner {
+    width: 100%; height: 800px;
+    background-image: url('../images/banner.png');
+    background-position: center;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    padding-top: 120px;
+}
+
+section.banner h1 {
+    margin-left: 50px;
+    font-size: 62px;
+    font-family: 'Inter';
+    color: rgb(var(--Font-green));
+    text-shadow: 2px 2px 4px rgba(var(--Font-green), 0.4);
+}
+
+section.banner a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    border: 2px solid white;
+    padding: 4px 12px;
+    border-radius: 48px;
+    position: absolute;
+    margin-left: 50px;
+    background-color: rgb(var(--Roxo-Elaine));
+    top: 90%;
+    transform: translateY(-50%);
+}
+
+section.banner a:hover {
+    transform: translateY(-50%) scale(1.1);
+    transition: 0.2s;
+    text-shadow: 0px 0px 24px black;
+}
+
+/* BANNER FIM */
+
+section.promo {
+    padding: 30px 0;
+    position: relative;
+}
+
+section.promo .circle {
+    width: 64px; height: 64px;
+    background-color: rgb(var(--Verde-Pri));
+    border-radius: 50%;
+    display: flex;
+    align-items: center; justify-content: center;
+    margin: 10px 0 20px;
+    cursor: pointer;
+    color: rgb(var(--Font-green));
+    position: relative;
+}
+
+section.promo .circle:hover i {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+section.promo .circle i {
+    color: rgb(var(--Font-green));
+    font-size: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+section.promo .circle span {
+    position: absolute;
+    top: 70%; left: 70%;
+    background-color: rgb(var(--Rosa-Emili));
+    padding: 1px 10px;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+section.produtos {
+    padding: 10px 0;
+}
+
+/* COMPRAS FIM */
+
+section.tamanho-cesta {
+    padding: 30px 0;
+}
+
+section.tamanho-cesta .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.tamanho-cesta .caixa {
+    width: 78px; height: 78px;
+    background-color: rgb(var(--Verde-Pri));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 8px;
+    border-radius: 8px;
+    position: relative;
+    filter: grayscale(100%);
+}
+
+section.tamanho-cesta .caixa.metade {
+    filter: grayscale(50%);
+}
+
+section.tamanho-cesta .caixa.completa {
+    filter: grayscale(0%);
+}
+
+section.tamanho-cesta .caixa i {
+    color: rgb(var(--Font-green));
+}
+
+section.tamanho-cesta .caixa:nth-of-type(1) i {
+    font-size: 16px;
+}
+
+section.tamanho-cesta .caixa:nth-of-type(2) i {
+    font-size: 24px;
+}
+
+section.tamanho-cesta .caixa:nth-of-type(3) i {
+    font-size: 36px;
+}
+
+section.tamanho-cesta .caixa span {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 1px;
+}
+
+section.tamanho-cesta p {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+}
+
+section.tamanho-cesta p#qtdMaximaProdutos {
+    display: none;
+}
+
+section.anuncio .container {
+    padding: 50px 2%;
+}
+
+section.anuncio .w100 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.anuncio .img {
+    max-width: 100%;
+    height: 360px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ANUNCIO FIM */
+
+section.sobre {
+    background-color: rgb(var(--Verde-Pri));
+}
+
+section.sobre .w100 .w50.val {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+section.sobre .w50 {
+    padding: 20px 2%;
+    min-height: 360px;
+}
+
+section.sobre .w50.noPad {
+    padding: 0;
+}
+
+section.sobre .w50 .img {
+    max-width: 100%; height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section.sobre h1 {
+    font-family: 'Italianno';
+    font-weight: normal;
+    font-size: 42px;
+    text-align: center;
+}
+
+section.sobre p {
+    margin: 10px 0;
+    font-family: 'Inter';
+    text-align: center;
+}
+
+section.sobre li {
+    margin: 10px 0;
+    font-family: 'Inter';
+}
+
+/* SOBRE FIM*/
+
+footer {
+    background-color: rgb(var(--Rosa-Emili));
+}
+
+footer > .container {
+    padding: 20px 0;
+}
+
+footer > .container .w100 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > .container h2 {
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 16px;
+}
+
+footer > .container .social-media {
+    display: flex; justify-content: center;
+    margin: 10px auto 0;
+}
+
+footer > .container .social-media ul li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+footer > .container .social-media ul li a {
+    font-size: 24px;
+    color: black;
+}
+
+footer > .container .social-media ul li a:hover {
+    color: rgb(75, 75, 75);
+}
+
+footer .container .w100 {
+    margin-top: 20px;
+}
+
+footer .container .w100 > .w50:first-of-type {
+    border-right: 1px solid black;
+}
+
+footer .container .w50 {
+    padding: 20px;
+}
+
+footer > .container .w50 p {
+    margin: 10px 0;
+    font-family: 'Roboto';
+}
+
+footer > .container .w50 form {
+    margin-top: 40px;
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > .container .w50 form input[type=email],
+footer > .container .w50 form input[type=submit] {
+    display: inline-block;
+    height: 32px;
+    border: 0; outline: none;
+}
+
+footer > .container .w50 form input[type=email] {
+    width: calc(100% - 80px);
+    padding-left: 16px;
+}
+
+footer > .container .w50 form input[type=submit]{
+    width: 80px;
+    background-color: rgb(var(--Roxo-Elaine));
+    color: white;
+    cursor: pointer;
+}
+
+footer > .container .w50 form input[type=submit]:hover {
+    background-color: rgb(var(--Roxo-Elaine));
+}
+
+footer .sub-footer {
+    padding: 10px;
+    background-color: rgb(var(--Roxo-Elaine));
+}
+
+footer .sub-footer p {
+    text-align: center;
+    color: white;
+}
+
+footer .sub-footer span {
+    font-family: 'Italianno';
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+footer .sub-footer a {
+    text-decoration: none;
+    color: rgb(var(--Verde-Pri));
+}
+
+footer .sub-footer a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --Rosa-Emili: 241, 141, 167;
+    --Verde-Pri: 160, 200, 174;
+    --Dourado-Bru: 190, 147, 94;
+    --Roxo-Elaine: 99, 79, 140;
+    --Branco-Mari: 240, 241, 243;
+
+    --Font-green: 32, 91, 61;
+}
+
+/*! background-color: rgb(var(--Branco-Mari)); */
+
+/*? Screen >= 992px < 1200px Large DESKTOP ------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width:1200px){
+    
+}
+
+/*? Screen >= 768px < 992px Medium TABLET -------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width:992px){
+    header .logo-wraper {
+        display: none;
+    }
+
+    .frase {
+        width: 100%;
+    }
+}
+
+/*? Screen >= 576px < 768px Small Phone ---------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width:768px){
+    .w50, .w33 {
+        width: 100%;
+    }
+
+    footer .container .w100 > .w50:first-of-type {
+        border: 0;
+    }
+
+    section.sobre .w100:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+
+    section.banner {
+        background-position: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    section.banner h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    section.banner a {
+        margin: 0 auto;
+    }
+}
+
+/*? Screen >= 0px < 576px Extra Small Phone ------------------------------------------------------------------------------------------------------------ */
+
+@media screen and (max-width:576px){
+
+    header .links {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+    header .perfil {
+        width: 80%;
+        margin: 0 auto 12px;
+        min-width: 275px;
+    }
+}
+
+/*? ---------------------------------------------------------------------------------------------------------------------------------------------------- */
