@@ -104,38 +104,48 @@
 
                         <div class="container">
     
-                            <div class="caixa pequena metade">
+                            <div class="caixas-header">
+
+                                <div class="caixa pequena metade">
     
-                                <i class="fa-solid fa-box"></i>
-    
-                                <span>P</span>
-    
-                            </div><!--caixa-->
-    
-                            <div class="caixa media">
-    
-                                <i class="fa-solid fa-box"></i>
-    
-                                <span>M</span>
-    
-                            </div><!--caixa-->
-    
-                            <div class="caixa grande">
-    
-                                <i class="fa-solid fa-box"></i>
-    
-                                <span>G</span>
-    
-                            </div><!--caixa-->
-    
-                            <p id="contagem">Você tem <span id="qtdProdutos">0</span> produtos no seu carrinho e faltam <span id="qtdLvlUpCaixa">0</span> produtos para sua caixinha <span id="qtdProdutosText">evoluir!</span></p>
-                            
-    
-                            <p id="qtdMaximaProdutos">Sua caixinha atingiu o limite</p>
+                                    <i class="fa-solid fa-box"></i>
+        
+                                    <span>P</span>
+        
+                                </div><!--caixa-->
+        
+                                <div class="caixa media">
+        
+                                    <i class="fa-solid fa-box"></i>
+        
+                                    <span>M</span>
+        
+                                </div><!--caixa-->
+        
+                                <div class="caixa grande">
+        
+                                    <i class="fa-solid fa-box"></i>
+        
+                                    <span>G</span>
+        
+                                </div><!--caixa-->
+        
+                                <p id="contagem">Você tem <span id="qtdProdutos">0</span> produtos no seu carrinho e faltam <span id="qtdLvlUpCaixa">0</span> produtos para sua caixinha <span id="qtdProdutosText">evoluir!</span></p>
+                                
+        
+                                <p id="qtdMaximaProdutos">Sua caixinha atingiu o limite</p>
+
+                            </div><!--caixas-header-->
 
                             <div class="lista">
 
                             </div><!--lista-->
+
+                            <div class="preco-final">
+
+                                <span>0.00R$</span>
+
+                            </div><!--preco-final-->
     
                         </div><!--container-->
     
@@ -172,6 +182,42 @@
 
         </section><!--banner-->
 
+        <section class="anuncio">
+
+            <div class="container">
+
+                <div class="frase">
+
+                    <h1>Conheça nossas ações sustentaveis</h1>
+
+                </div><!--frase-->
+
+                <div class="w100">
+
+                    <div class="card w33">
+
+                        <div class="img" style="background-image: url('images/marketing_01.png');"></div>
+    
+                    </div><!--card-->
+    
+                    <div class="card w33">
+    
+                        <div class="img" style="background-image: url('images/marketing_02.png');"></div>
+    
+                    </div><!--card-->
+    
+                    <div class="card w33">
+    
+                        <div class="img" style="background-image: url('images/marketing_03.jpg');"></div>
+    
+                    </div><!--card-->
+
+                </div><!--w100-->
+
+            </div><!--container-->
+
+        </section><!--anuncio-->
+
         <section class="promo">
 
             <div class="cupom click">
@@ -205,7 +251,7 @@
                             <h2>Cesta de beleza</h2>
                             <span>180,00 R$<div class="line"></div></span>
                             <span>90,00 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -214,65 +260,67 @@
                             <h2>Cesta de banho</h2>
                             <span>134,00 R$<div class="line"></div></span>
                             <span>72,30 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_03.jpg')"></div>
+                        <div class="img" style="background-image:url('images//cesta_03.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Cesta Surpresa 01</h2>
+                            <span>180,00 R$<div class="line"></div></span>
+                            <span>52,90 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_04.jpg')"></div>
+                        <div class="img" style="background-image:url('images/cesta_04.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Cesta de cosméticos 01</h2>
+                            <span>142,30 R$<div class="line"></div></span>
+                            <span>63,40 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_05.jpg')"></div>
+                        <div class="img" style="background-image:url('images/cesta_05.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Cesta de cosméticos 02</h2>
+                            <span>132,40 R$<div class="line"></div></span>
+                            <span>61,30 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_06.jpg')"></div>
+                        <div class="img" style="background-image:url('images/cesta_06.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Cesta de cosméticos 03</h2>
+                            <span>95,00R$<div class="line"></div></span>
+                            <span>40,00R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_07.jpg')"></div>
+                        <div class="img" style="background-image:url('images/cesta_07.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Cesta de cosméticos 03</h2>
+                            <span>72,00 R$<div class="line"></div></span>
+                            <span>55,0  0 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_08.jpg')"></div>
+                        <div class="img" style="background-image:url('images/cesta_08.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Cesta produtos para cabelo</h2>
+                            <span>61,50 R$<div class="line"></div></span>
+                            <span>32,50 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
 
                 </div><!--carroussel-->
+
+                <p>As cestas podem conter de 7 à 15 produtos diversos</p>
 
             </div><!--container-->
 
@@ -292,12 +340,6 @@
 
                 </div><!--frase-->
 
-                <div class="aviso">
-
-                    <p>Na compra de <span>3 ou mais</span> produtos das 3 categorias você ganha o desconto equivalente ao de uma cesta</p>
-
-                </div><!--aviso-->
-
                 <div class="mini-banner" style="background-image: url('images/mini-banner_01.jpg')">
 
                     <div class="titulo roxo">
@@ -311,9 +353,9 @@
                     <div class="product">
                         <div class="img" style="background-image:url('images/batom_01.jpg')"></div>
                         <div class="info">
-                            <h2>Batom</h2>
+                            <h2>Batom Clinique</h2>
                             <span>9,90 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -321,7 +363,7 @@
                         <div class="info">
                             <h2>Mascara Facial</h2>
                             <span>10,36 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -329,55 +371,43 @@
                         <div class="info">
                             <h2>Lixa de Unha</h2>
                             <span>3,27 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_04.jpg')"></div>
+                        <div class="img" style="background-image:url('images/batom_02.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Batom Bella Femme</h2>
+                            <span>14,99 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_05.jpg')"></div>
+                        <div class="img" style="background-image:url('images/batom_03.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Batom Lyrics</h2>
+                            <span>10,00 R$<div class="line"></div></span>
+                            <span>9,00 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_06.jpg')"></div>
+                        <div class="img" style="background-image:url('images/mascara_facial_02.jpg')"></div>
                         <div class="info">
                             <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <span>12,32 R$<div class="line"></div></span>
+                            <span>7,50 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_07.jpg')"></div>
+                        <div class="img" style="background-image:url('images/lixa-de-unha_02.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Licha de unha O.P.I</h2>
+                            <span>7,99 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
-                    <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_08.jpg')"></div>
-                        <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
-                        </div><!--info-->
-                    </div><!--product-->
-
                 </div><!--carroussel-->
 
             </div><!--container-->
@@ -390,8 +420,8 @@
 
                 <div class="mini-banner" style="background-image: url('images/mini-banner_02.jpg');">
 
-                    <div class="titulo verde">
-                        <h2>Cremes</h2>
+                    <div class="titulo roxo">
+                        <h2>Vestuário</h2>
                     </div><!--titulo-->
 
                 </div><!--mini-banner-->
@@ -399,75 +429,68 @@
                 <div id="c1" class="carroussel">
 
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_01.jpg')"></div>
+                        <div class="img" style="background-image:url('images/calcinha_01.png')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Kit 10 calcinhas GMI Langerie</h2>
+                            <span>65,00 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_02.jpg')"></div>
+                        <div class="img" style="background-image:url('images/calcinha_02.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Kit 3 calcinhas QLC Sport</h2>
+                            <span>15,22 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_03.jpg')"></div>
+                        <div class="img" style="background-image:url('images/calcinha_03.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Kit 3 calcinhas de algodão</h2>
+                            <span>47,00 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_04.jpg')"></div>
+                        <div class="img" style="background-image:url('images/calcinha_04.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Calcinha Calvin Clein Short</h2>
+                            <span>41,99R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_05.jpg')"></div>
+                        <div class="img" style="background-image:url('images/prendedor-cabelo_01.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>3 Peças garra de cabelo</h2>
+                            <span>17,99 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_06.jpg')"></div>
+                        <div class="img" style="background-image:url('images/prendedor-cabelo_02.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Scrunchie</h2>
+                            <span>32,00 R$<div class="line"></div></span>
+                            <span>25,00 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_07.jpg')"></div>
+                        <div class="img" style="background-image:url('images/prendedor-cabelo_03.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>12 peças de presilha para cabelo</h2>
+                            <span>21,95 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
-                        <div class="img" style="background-image:url('images/perfume_08.jpg')"></div>
+                        <div class="img" style="background-image:url('images/prendedor-cabelo_04.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
-                            <span>180R$<div class="line"></div></span>
-                            <span>90R$</span>
-                            <button>Comprar</button>
+                            <h2>Kit 2 ganchos de cabelo</h2>
+                            <span>6,95 R$</span>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
 
@@ -496,7 +519,7 @@
                         <div class="info">
                             <h2>Absorvente</h2>
                             <span>16,00 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -504,7 +527,7 @@
                         <div class="info">
                             <h2>Lenço Umedecido</h2>
                             <span>7,99 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -512,7 +535,7 @@
                         <div class="info">
                             <h2>Escova de bambu</h2>
                             <span>22,99 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -520,7 +543,7 @@
                         <div class="info">
                             <h2>Fio dental</h2>
                             <span>8,20 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -528,7 +551,7 @@
                         <div class="info">
                             <h2>Sabonete</h2>
                             <span>5,30 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -536,7 +559,7 @@
                         <div class="info">
                             <h2>Sabonete Liquido</h2>
                             <span>12,90 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -544,7 +567,7 @@
                         <div class="info">
                             <h2>Protetor de Assento</h2>
                             <span>57,80 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
                     <div class="product">
@@ -552,7 +575,7 @@
                         <div class="info">
                             <h2>Algodão</h2>
                             <span>16,90 R$</span>
-                            <button>Comprar</button>
+                            <button id="add">Comprar</button>
                         </div><!--info-->
                     </div><!--product-->
 
@@ -561,36 +584,6 @@
             </div><!--container-->
 
         </section><!--higiene-->
-
-        <section class="anuncio">
-
-            <div class="container">
-
-                <div class="w100">
-
-                    <div class="card w33">
-
-                        <div class="img" style="background-image: url('images/marketing_01.png');"></div>
-    
-                    </div><!--card-->
-    
-                    <div class="card w33">
-    
-                        <div class="img" style="background-image: url('images/marketing_02.png');"></div>
-    
-                    </div><!--card-->
-    
-                    <div class="card w33">
-    
-                        <div class="img" style="background-image: url('images/marketing_03.jpg');"></div>
-    
-                    </div><!--card-->
-
-                </div><!--w100-->
-
-            </div><!--container-->
-
-        </section><!--anuncio-->
         
         <section class="sobre">
 

@@ -88,6 +88,7 @@ html,body {height: 100%;}
 }
 
 .carroussel .product .info h2 {
+    font-size: 16px;
     font-family: 'Inter';
     margin: 4px 0 8px;
 }
@@ -394,14 +395,78 @@ header .carrinho-container #close {
 }
 
 header .carrinho-container .lista .product {
-    width: 300px; height: 120px;
-    background-color: red;
+    width: 290px; height: 120px;
+    margin: 8px 0;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(var(--Branco-Mari));
+    position: relative;
+    left: -3px;
 }
 
 header .carrinho-container .lista .product .img {
-    width: 120px; height: 120px;
+    width: 110px; height: 110px;
     background-position: center;
-    background-color: #ccc;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header section.tamanho-cesta .product .info {
+    width: calc(100% - 110px);
+    padding: 8px;
+}
+
+header section.tamanho-cesta .product .info h2 {
+    font-size: 18px;
+}
+
+header section.tamanho-cesta .product .info span {
+    width: 100%;
+    display: inline-block;
+    margin: 2px 0;
+}
+
+header section.tamanho-cesta .product .info input {
+    width: 52px;
+    padding: 2px 8px;
+    display: inline-block;
+}
+
+header section.tamanho-cesta .product .info button {
+    display: block;
+    margin-top: 8px;
+    border: 0;
+    outline: none;
+    background-color: rgb(211, 91, 91);
+    padding: 4px;
+    color: white;
+}
+
+header section.tamanho-cesta {
+    height: 100%;
+}
+
+header section.tamanho-cesta .container {
+    height: 100%;
+}
+
+header section.tamanho-cesta .lista {
+    height: calc(70% - 91px);
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 0;
+}
+
+header section.tamanho-cesta .preco-final {
+    height: calc(25% - 91px);
+    width: 100%;
+    position: relative;
+    top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
 }
 
 /* HEADER FIM */
@@ -494,10 +559,11 @@ section.tamanho-cesta {
     padding: 10px 0;
 }
 
-section.tamanho-cesta .container {
+section.tamanho-cesta .caixas-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 150px;
 }
 
 section.tamanho-cesta .caixa {
@@ -511,6 +577,10 @@ section.tamanho-cesta .caixa {
     border-radius: 8px;
     position: relative;
     filter: grayscale(100%);
+}
+
+header section.tamanho-cesta .caixa {
+    
 }
 
 section.tamanho-cesta .caixa.metade {
