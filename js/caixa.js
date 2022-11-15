@@ -17,6 +17,14 @@ $(function(){
     var caixaMedia = $('.caixa.media');
     var caixaGrande = $('.caixa.grande');
 
+    $('#abriCarrinho').click(function(){
+        $('.carrinho-container').show();
+    });
+
+    $('#close').click(function(){
+        $('.carrinho-container').hide();
+    });
+
     atualizarProduto();
 
     $('p.soma').click(function(){
@@ -107,6 +115,20 @@ $(function(){
         });
 
         $('#qtdLvlUpCaixa').html(qtdLvlUpCaixa);
+
+        $('.product button').click(function(){
+
+            let image = $(this).parent().parent().find('.img').css('background-image');
+            
+            console.log(image)
+
+            $('.lista').append('<div class="product">'
+            +`<div class="img" style="`+image+`"></div>`
+            +`</div>`
+            )
+
+
+        });
 
     }
 
