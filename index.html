@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="icons/logo.ico">
     <!--JavaScripts-->
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/slick.min.js"></script>
@@ -37,6 +38,7 @@
     <script src="js/carroussel.js"></script>
     <script src="js/cupom-notification.js"></script>
     <script src="js/caixa.js"></script>
+    <script src="js/goto.js"></script>
 </head>
 <body>
 
@@ -54,16 +56,16 @@
 
                         <ul>
 
-                            <li><a href="">Cestas</a></li>
-                            <li><a href="">Perfumes</a></li>
-                            <li><a href="">Cremes</a></li>
-                            <li><a href="">Higiene</a></li>
+                            <li><a href="" class="go" goto="cestas">Cestas</a></li>
+                            <li><a href="" class="go" goto="cosmeticos">Cosméticos</a></li>
+                            <li><a href="" class="go" goto="vestuario">Vestuário</a></li>
+                            <li><a href="" class="go" goto="higiene">Higiene</a></li>
 
                         </ul>
 
                     </li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Nossas ações</a></li>
+                    <li><a href="" class="go" goto="sobre">Sobre nós</a></li>
+                    <li><a href="" class="go" goto="acoes">Nossas ações</a></li>
 
                 </ul>
 
@@ -143,7 +145,7 @@
 
                             <div class="preco-final">
 
-                                <span>0.00R$</span>
+                                <button>Comprar</button>
 
                             </div><!--preco-final-->
     
@@ -178,17 +180,17 @@
 
             </div><!--cupom-->
 
-            <a href="#">Monte já o seu kit!</a>
+            <a href="#" class="go" goto="monte">Monte já o seu kit!</a>
 
         </section><!--banner-->
 
-        <section class="anuncio">
+        <section class="anuncio" id="acoes">
 
             <div class="container">
 
                 <div class="frase">
 
-                    <h1>Conheça nossas ações sustentaveis</h1>
+                    <h1>Conheça nossas ações sustentáveis</h1>
 
                 </div><!--frase-->
 
@@ -218,7 +220,7 @@
 
         </section><!--anuncio-->
 
-        <section class="promo">
+        <section class="cestas" id="cestas">
 
             <div class="cupom click">
 
@@ -239,7 +241,7 @@
 
                 <div class="frase">
 
-                    <h1>Compre nossas cestas e receba grandes<br> descontos em em ótimos produtos</h1>
+                    <h1>Compre nossas cestas e receba grandes<br> descontos em ótimos produtos</h1>
 
                 </div><!--frase-->
 
@@ -326,7 +328,7 @@
 
         </section><!--promo-->
 
-        <section class="cosméticos">
+        <section class="cosmeticos" id="cosmeticos">
 
             <div class="container">
 
@@ -334,7 +336,7 @@
 
                 <div class="frase">
 
-                    <h1>
+                    <h1 id="monte">
                         Ou <span>monte a sua própria cesta!</span> que combine mais com você
                     </h1>
 
@@ -394,7 +396,7 @@
                     <div class="product">
                         <div class="img" style="background-image:url('images/mascara_facial_02.jpg')"></div>
                         <div class="info">
-                            <h2>Perfume</h2>
+                            <h2>Mascara Oce'ane</h2>
                             <span>12,32 R$<div class="line"></div></span>
                             <span>7,50 R$</span>
                             <button id="add">Comprar</button>
@@ -414,7 +416,7 @@
 
         </section><!--cosméticos-->
 
-        <section class="cremes produtos">
+        <section class="vestuario" id="vestuario">
 
             <div class="container">
 
@@ -500,7 +502,7 @@
 
         </section><!--cremes-->
 
-        <section class="higiene">
+        <section class="higiene" id="higiene">
 
             <div class="container">
 
@@ -585,7 +587,7 @@
 
         </section><!--higiene-->
         
-        <section class="sobre">
+        <section class="sobre" id="sobre">
 
             <div class="container flex">
 

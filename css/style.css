@@ -68,10 +68,11 @@ html,body {height: 100%;}
 }
 
 .carroussel .product {
-    width: 270px; height: 300px;
+    width: 270px; height: 330px;
     background-color: white;
     margin: 0 20px;
     padding: 20px;
+    position: relative;
 }
 
 .carroussel .product .img {
@@ -108,9 +109,10 @@ html,body {height: 100%;}
 .carroussel .product .info button {
     width: 100%; background-color: rgb(var(--Verde-Pri));
     border: 0; outline: none;
-    height: 24px;
-    margin-top: 10px;
+    margin-top: 30px;
+    height: 32px;
     cursor: pointer;
+    color: rgb(var(--Font-green));
 }
 
 .lineFrase {
@@ -278,6 +280,10 @@ header .links ul li a {
     color: rgb(var(--Font-green));
 }
 
+header .links ul li a:hover {
+    text-decoration: underline;
+}
+
 header .links ul li:hover > ul {
     display: block;
 }
@@ -395,18 +401,16 @@ header .carrinho-container #close {
 }
 
 header .carrinho-container .lista .product {
-    width: 290px; height: 120px;
-    margin: 8px 0;
+    width: 96%; height: 120px;
+    margin: 8px 2%;
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(var(--Branco-Mari));
-    position: relative;
-    left: -3px;
 }
 
 header .carrinho-container .lista .product .img {
-    width: 110px; height: 110px;
+    width: 110px; height: 100px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -441,6 +445,7 @@ header section.tamanho-cesta .product .info button {
     background-color: rgb(211, 91, 91);
     padding: 4px;
     color: white;
+    cursor: pointer;
 }
 
 header section.tamanho-cesta {
@@ -449,6 +454,7 @@ header section.tamanho-cesta {
 
 header section.tamanho-cesta .container {
     height: 100%;
+    padding: 0;
 }
 
 header section.tamanho-cesta .lista {
@@ -462,11 +468,26 @@ header section.tamanho-cesta .preco-final {
     height: calc(25% - 91px);
     width: 100%;
     position: relative;
-    top: -15px;
+    top: -11px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    border-top: 12px solid rgb(var(--Branco-Mari));
+}
+
+header section.tamanho-cesta .preco-final button {
+    width: 80%;
+    height: 60%;
+    background-color: rgb(var(--Verde-Pri));
+    color: rgb(var(--Font-green));
+    border: 0;
+    outline: 0;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+header section.tamanho-cesta .preco-final button:hover {
+
 }
 
 /* HEADER FIM */
@@ -511,12 +532,12 @@ section.banner a:hover {
 
 /* BANNER FIM */
 
-section.promo {
+section.cestas {
     padding: 30px 0;
     position: relative;
 }
 
-section.promo .circle {
+section.cestas .circle {
     width: 64px; height: 64px;
     background-color: rgb(var(--Verde-Pri));
     border-radius: 50%;
@@ -528,19 +549,19 @@ section.promo .circle {
     position: relative;
 }
 
-section.promo .circle:hover i {
+section.cestas .circle:hover i {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
 
-section.promo .circle i {
+section.cestas .circle i {
     color: rgb(var(--Font-green));
     font-size: 32px;
     position: relative;
     z-index: 2;
 }
 
-section.promo .circle span {
+section.cestas .circle span {
     position: absolute;
     top: 70%; left: 70%;
     background-color: rgb(var(--Rosa-Emili));
@@ -564,6 +585,10 @@ section.tamanho-cesta .caixas-header {
     flex-wrap: wrap;
     justify-content: center;
     height: 150px;
+}
+
+section.tamanho-cesta .caixas-header p {
+    margin: 0 6px;
 }
 
 section.tamanho-cesta .caixa {

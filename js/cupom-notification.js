@@ -5,7 +5,7 @@ $(function(){
     var nbrNot = $('#cupom').text();
     var show = false;
 
-    $('section.promo .circle').click(function(){
+    $('section.cestas .circle').click(function(){
 
         $('.cupom.click').show();
         show = true;

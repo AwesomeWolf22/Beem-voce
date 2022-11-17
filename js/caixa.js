@@ -19,7 +19,9 @@ $(function(){
 
     var productsList=[];
 
-    var nameRepeted
+    var nameRepeted;
+
+    var valorTotal = 0;
 
     $('#abriCarrinho').click(function(){
         $('.carrinho-container').show();
@@ -124,32 +126,24 @@ $(function(){
 
     $('.product button#add').click(function(){
 
-        var image = $(this).parent().parent().find('.img').clone();
-        var productH2 = $(this).parent().find('h2').clone();
-        var productprice = $(this).parent().find('span:last-of-type').clone();
-        var productName = $(this).parent().find('h2').text();
+        let image = $(this).parent().parent().find('.img').clone();
+        let productH2 = $(this).parent().find('h2').clone();
+        let productprice = $(this).parent().find('span:last-of-type').clone();
+        let productName = $(this).parent().find('h2').text();
 
-        if($('.lista .product.'+productName).length>=1){
-            let size = $('.lista .product.'+productName).find('#qtdOfThisProduct').text();
-            size++;
-            $('.lista .product.'+productName).find('#qtdOfThisProduct').html(size);
-        }else{
-            $('.lista').append('<div class="product"></div>');
+        $('.lista').append('<div class="product"></div>');
 
-            $('.lista .product').eq(qtdProdutos).addClass(productName)
+        $('.lista .product').eq(qtdProdutos).addClass(productName)
 
-            $('.lista .product').eq(qtdProdutos).append(image);
+        $('.lista .product').eq(qtdProdutos).append(image);
 
-            $('.lista .product').eq(qtdProdutos).append('<div class="info"></div>');
+        $('.lista .product').eq(qtdProdutos).append('<div class="info"></div>');
 
-            $('.lista .product').eq(qtdProdutos).find('.info').append(productH2);
+        $('.lista .product').eq(qtdProdutos).find('.info').append(productH2);
 
-            $('.lista .product').eq(qtdProdutos).find('.info').append(productprice);
+        $('.lista .product').eq(qtdProdutos).find('.info').append(productprice);
 
-            $('.lista .product').eq(qtdProdutos).find('.info').append('<span id="qtdOfThisProduct">1</span>')
-
-            $('.lista .product').eq(qtdProdutos).find('.info').append('<button id="remove">Remover</button>');
-        }
+        $('.lista .product').eq(qtdProdutos).find('.info').append('<button id="remove">Remover</button>');
 
         somarProduto();
 
@@ -157,18 +151,10 @@ $(function(){
 
     $('.lista').on('click','#remove',function(){
 
-        if($(this).parent().find('span:last-of-type').text()==1){
-            $(this).parent().parent().remove();
-        }else{
-            let nbr = $(this).parent().find('span:last-of-type').text();
-            nbr--;
-            $(this).parent().find('span:last-of-type').text(nbr);
-        }
+        $(this).parent().parent().remove();
 
         subtrairProduto();
         
     });
-
-    
 
 });
